@@ -1,16 +1,15 @@
-const express = require('express');
-const path = require('path');
-const homeRouter = require('./routes/home');
-const aboutRouter = require('./routes/about');
-const contactRouter = require('./routes/contact');
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '../dist')));
-
-app.use('/', homeRouter);
-app.use('/about', aboutRouter);
-app.use('/contact', contactRouter);
+// Add routes here
+app.get("/", (req, res) => {
+  res.send("Server is running!");
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {

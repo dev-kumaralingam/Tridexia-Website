@@ -1,26 +1,43 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css } from "lit";
 
-class HeaderComponent extends LitElement {
+export class Header extends LitElement {
   static styles = css`
-    /* Header styles */
+    header {
+      background-color: navy;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    header img {
+      height: 50px; /* Logo height */
+      width: auto;  /* Keep aspect ratio */
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      font-family: 'Roboto', sans-serif; /* Ensure this font is loaded */
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
   `;
 
   render() {
     return html`
       <header>
-        <div class="logo">
-          <img src="logo.svg" alt="Tridexia Logo">
-        </div>
+        <img src="/images/logo.jpg" alt="Tridexia Logo" class="logo" />
         <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
         </nav>
       </header>
     `;
   }
 }
 
-customElements.define('header-component', HeaderComponent);
+customElements.define("tridexia-header", Header);

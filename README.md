@@ -55,6 +55,9 @@ Package the Lit application and server-side components for deployment to a hosti
 ### File Structure:
 
 tridexia-website/
+├── public/
+│   ├── images/
+│   │   └── logo.jpg
 ├── server/
 │   ├── app.js
 │   └── routes/
@@ -76,7 +79,9 @@ tridexia-website/
 │   ├── styles/
 │   │   ├── global.css
 │   │   └── components.css
+│   ├── index.html
 │   └── index.js
+├── vite.config.js
 ├── package.json
 └── package-lock.json
 

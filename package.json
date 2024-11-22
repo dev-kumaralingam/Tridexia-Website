@@ -1,21 +1,25 @@
 {
   "name": "tridexia-website",
   "version": "1.0.0",
-  "description": "To create a dynamic, responsive website using Lit components and server-side rendering, I would recommend the following file structure and steps:",
+  "description": "Dynamic, responsive website using Lit components and Vite.",
   "main": "index.js",
   "scripts": {
-    "start": "node server/app.js",
-    "dev": "nodemon server/app.js"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "keywords": [],
-  "author": "Kumaralingam S",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
-    "express": "^4.21.1"
+    "lit": "^3.2.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
-  }
+    "vite": "^5.4.11"
+  },
+  "keywords": [
+    "lit",
+    "vite",
+    "responsive",
+    "dynamic"
+  ],
+  "author": "",
+  "license": "ISC"
 }
